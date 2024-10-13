@@ -1,0 +1,10 @@
+{
+	"tasks": {
+		"build" : "deno --allow-read --allow-write --allow-env tools/build.ts"
+	},
+	"fmt": {
+		"include": ["src/", "tools", "docs/"],
+		"singleQuote": true
+	},
+	"lock": false
+}

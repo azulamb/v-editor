@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>v-editor sample</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="./apple-touch-icon-precomposed.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./v-editor.js" defer></script>
+    <style>
+    </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const editor = document.getElementById('editor');
+        editor.addEventListener('paste', (event) => {
+          console.log(event);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="editor-header">
+      <button data-type="reset">Reset</button>
+    </div>
+    <v-editor
+      id="editor"
+      style="width: 25rem; height: 25rem"
+      header="#editor-header"
+      contenteditable_="true"
+    ></v-editor>
+    <textarea></textarea>
+  </body>
+</html>
